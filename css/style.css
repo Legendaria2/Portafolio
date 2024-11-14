@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400..700&family=Teko:wght@300..700&display=swap');
+ :root{
+    --primary-color-oscuro:#001524;
+    --secondary-color-oscuro:#445d48;
+    --primary-color-claro:#D6cc99;
+    --secondary-color-claro:#fde5d4;
+    --primary-letra:font-family: "Lora", sans-serif;
+    --secondary-letra:font-family: "Teko", sans-serif;
+
+ }
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+header {
+    background: var(--primary-color-oscuro);
+    width: 100%;
+    height: 283px;
+}
+header h2 {
+    font-family: var(--primary-letra);
+    color: #fff;
+}
+header article .navegador{
+    background: var(--primary-color-claro);
+    color: #001524;
+    margin-bottom: 150px;
+    margin-top: 9px;
+    height: 40px;
+    width: 225px;
+    padding: 0 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header article .descarga{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+header article .descarga h3{
+    margin-left: -35px;
+    font-size: 40px;
+    font-family: var(--primary-letra);
+    color: var(--secondary-color-claro);
+}
