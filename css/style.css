@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400..700&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&display=swap');
  :root{
     --primary-color-oscuro:#001524;
     --secondary-color-oscuro:#445d48;
     --primary-color-claro:#D6cc99;
     --secondary-color-claro:#fde5d4;
-    --primary-letra:font-family: "Lora", sans-serif;
+    --primary-letra:font-family: "Lora";
     --secondary-letra:font-family: "Teko", sans-serif;
 
  }
@@ -19,21 +20,25 @@ body{
     height: 100vh;
 }
 
-h1,h2,h3,h4,h5, p{
-    font-family: "Lora", sans-serif;
-    font-weight: 300;
+h1,h3,h4,h5,p{
+    font-family: "Lora";
+    font-style: italic;
+    font-weight: 400;
 }
 
 header{
     background: var(--primary-color-oscuro);
     width: 100%;
-    height: 100vh;
+    height: 610px;
     text-align: center;
-    position: absolute;
+    
 }
 
 header article{
-    padding: 50px;
+    padding:40px;
+}
+header .text {
+    position: absolute;
 }
 
 header article .navegador{
@@ -41,12 +46,8 @@ header article .navegador{
     background: rgba(3, 42, 70, 1);
     box-shadow: inset 0 0 6px #fff,0 0 6px #fff;
     border-radius: 10px;
+    width: auto;
     height: 8vh;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    /* padding: 10px 60px; */
-    margin: 80 auto;
     z-index: 99;
 }
 header article .navegador li a{
@@ -84,18 +85,127 @@ header article p{
     background: linear-gradient(90deg, #D6CC99, #498FA3);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    animation: fondo 10s infinite ;
+    transition: .4s;
 }
-
+@keyframes fondo {
+    0%,100%{
+        background: linear-gradient(90deg, #D6CC99, #498FA3);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    25%,75%{
+        background: linear-gradient(270deg,#498FA3, #D6CC99);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    50%{
+        background: linear-gradient(180deg,#498FA3, #D6CC99);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
 header article .circulo{
     width: 350px;
     height: 350px;
     border-radius: 100%;
-    background: #445d48;
+    background: #445d4856;
     z-index: 2;
     margin-left: 270px;
 }
 
 header article .circulo img{
-
     z-index: 50;
+}
+header .iconos ul{
+    list-style: none;
+}
+header .iconos ul li {
+    background: #3b523f9c;
+    border-radius: 50%;
+    width: 108px;
+    height: 108px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconos ul li :hover {
+    color: var(--primary-color-claro);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20%;
+}
+
+header .iconos ul i{
+    font-size: 74px;
+    color: #fff;
+}
+header .iconos ul li:nth-child(1) {
+    position: relative;
+    left: 160px;
+    right: 0;
+    bottom:330px;
+    z-index: 100;
+}
+header .iconos ul li:nth-child(2) {
+    position: relative;
+    right: 0;
+    left: 460px;
+    top:-510px;
+    z-index: 100;
+}
+header .iconos ul li:nth-child(3) {
+    position: relative;
+    right: 0;
+    left: 440px;
+    bottom:380px;
+    z-index: 100;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    background: rgb(68,93,72);
+    background: linear-gradient(10deg, rgba(68,93,72,1) 47%, rgba(105,144,111,1) 75%, rgba(143,195,151,1) 92%);
+}
+main section.skill h2{
+    color:var(--secondary-color-claro);
+    font-size: 96px;
+    font-family: "Lora";
+    font-style: italic;
+    -webkit-text-stroke: 1px #001524;
+    padding: 5px 50px 0 50px;
+}
+main .tarjeta{
+    width: 651px;
+    height: 135px;
+    background: linear-gradient(143deg, rgba(255,255,255,0.1) 32%, rgba(153,153,153,0.1) 83%);
+    box-shadow: 4px 0 10px #00000048;
+    border-radius: 35px;
+    margin: 56px 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+main .tarjeta:nth-child(2){
+    margin-left: 50%;
+}
+main .tarjeta i{
+    font-size: 100px;
+    padding: 22px;
+    color: var(--primary-color-claro);
+}
+
+
+@media (max-width: 991px) and (min-width: 300px) {
+    header article .navegador{
+        position: static;
+        background: rgba(3, 42, 70, 1);
+        box-shadow: none;
+        border-radius: 10px;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        z-index: 99;
+    }
 }
