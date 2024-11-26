@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400..700&family=Teko:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&display=swap');
+
  :root{
     --primary-color-oscuro:#001524;
     --secondary-color-oscuro:#445d48;
     --primary-color-claro:#D6cc99;
     --secondary-color-claro:#fde5d4;
-    --primary-letra:font-family: "Lora";
+    --primary-letra:font-family: "Lora",sans-serif;
     --secondary-letra:font-family: "Teko", sans-serif;
-
  }
 
 *{
@@ -22,7 +21,7 @@ body{
 }
 
 h1,h3,h4,h5,p{
-    font-family: "Lora";
+    font-family: "Lora",sans-serif;
     font-style: italic;
     font-weight: 400;
 }
@@ -30,7 +29,7 @@ h1,h3,h4,h5,p{
 header{
     background: var(--primary-color-oscuro);
     width: 100%;
-    height: 610px;
+    max-height: 610px;
     text-align: center;
     
 }
@@ -38,17 +37,13 @@ header{
 header article{
     padding:40px;
 }
-header.text {
-    position: absolute;
-}
-
 header article .navegador{
     position: fixed;
     background: rgba(3, 42, 70, 1);
     box-shadow: inset 0 0 6px #fff,0 0 6px #fff;
     border-radius: 10px;
     width: auto;
-    height: 8vh;
+    max-height: 8vh;
     z-index: 99;
 }
 header article .navegador li a{
@@ -164,15 +159,13 @@ header .iconos ul li:nth-child(3) {
 }
 main {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: rgb(68,93,72);
     background: linear-gradient(10deg, rgba(68,93,72,1) 47%, rgba(105,144,111,1) 75%, rgba(143,195,151,1) 92%);
 }
 main section.skill h2{
     color:var(--secondary-color-claro);
     font-size: 96px;
-    font-family: "Lora";
-    font-style: italic;
     -webkit-text-stroke: 1px #001524;
     padding: 5px 50px 0 50px;
 }
@@ -250,10 +243,33 @@ section.portafolio h2 {
     width: 310px;
     height: 420px;
 }
+section.experiencias{
+    background: var(--secondary-color-oscuro);
+    width: 100%;
+    height: 1425px;
+    border: 1px solid #000;
+}
+section.experiencias h2 {
+    color: #fff;
+    font-size: 50px;
+    margin: 50px 25px;
+    
+}
+section.experiencias .mensaje {
+    width: 1050px;
+    height: 485px;
+    background: #999;
+    border: 5px solid #000;
+    border-radius: 50px;
+    margin: 20px 50px;
 
+}
 
-
-
+footer {
+    background: var(--primary-color-oscuro);
+    width: 100%;
+    height: 280px;
+}
 
 
 
@@ -263,13 +279,21 @@ section.portafolio h2 {
         background: rgba(3, 42, 70, 1);
         box-shadow: none;
         border-radius: 10px;
-        width: auto;
         padding: 0;
         margin: 0;
         z-index: 99;
     }
+
     main .tarjeta-2{
         margin-left: 0;
         margin: 56px 70px;
+    header{
+        background: var(--primary-color-oscuro);
+        width: 100%;
+        min-height: 610px;
+        position: static;   
+    }
+    header .text {
+        position: static;
     }
 }
