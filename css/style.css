@@ -12,6 +12,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     
 }
 body{
@@ -180,13 +181,67 @@ main .tarjeta{
     align-items: center;
 
 }
-main .tarjeta:nth-child(2){
+main .tarjeta-2{
     margin-left: 50%;
 }
 main .tarjeta i{
     font-size: 100px;
     padding: 22px;
     color: var(--primary-color-claro);
+}
+main section.portafolio {
+    height: 765px;
+    width: 100%;
+    background-color: var(--primary-color-oscuro);
+    border: 2px solid #ffffff80;
+}
+section.portafolio h2 {
+    padding: 20px 30%;
+    color: #fff;
+    font-size: 96px;
+    text-shadow: 0 0 5px #fff,0 0 25px #fff, 0 0 50px #fff;
+    -webkit-text-stroke: 0.5px #D6CC99;
+}
+
+.contenido {
+    background-color: #7D9EB8;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 290px;
+    width: 260px;
+    margin: 20px auto;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.botones a {
+    text-decoration: none;
+    background: #001524;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.botones a:hover {
+    background: #D6CC99;
+    color: #001524;
+}
+
+.cartas {
+    margin: 40px;
+    background: #fff;
+    width: 310px;
+    height: 420px;
 }
 section.experiencias{
     background: var(--secondary-color-oscuro);
@@ -217,6 +272,7 @@ footer {
 }
 
 
+
 @media (max-width: 991px) and (min-width: 300px) {
     header article .navegador{
         position: static;
@@ -227,6 +283,10 @@ footer {
         margin: 0;
         z-index: 99;
     }
+
+    main .tarjeta-2{
+        margin-left: 0;
+        margin: 56px 70px;
     header{
         background: var(--primary-color-oscuro);
         width: 100%;
