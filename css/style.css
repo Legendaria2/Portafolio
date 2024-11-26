@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400..700&family=Teko:wght@300..700&display=swap');
-
- :root{
+:root{
     --primary-color-oscuro:#001524;
     --secondary-color-oscuro:#445d48;
     --primary-color-claro:#D6cc99;
     --secondary-color-claro:#fde5d4;
-    --primary-letra:font-family: "Lora",sans-serif;
-    --secondary-letra:font-family: "Teko", sans-serif;
- }
+    /* --primary-letra:font-family: "Lora",sans-serif;
+    --secondary-letra:font-family: "Teko", sans-serif; */
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     
 }
 body{
@@ -20,10 +22,10 @@ body{
     height: 100vh;
 }
 
-h1,h3,h4,h5,p{
-    font-family: "Lora",sans-serif;
+h1,h2,h3,h4,h5,h6{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
     font-style: italic;
-    font-weight: 400;
 }
 
 header{
@@ -68,7 +70,7 @@ header article h4{
 }
 
 header article p{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 header article h2, h3, h4, p{
@@ -81,8 +83,8 @@ header article p{
     background: linear-gradient(90deg, #D6CC99, #498FA3);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    animation: fondo 10s infinite ;
-    transition: .4s;
+    animation: fondo 5s infinite ;
+    transition: .4s ease-in-out;
 }
 @keyframes fondo {
     0%,100%{
@@ -90,16 +92,22 @@ header article p{
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
-    25%,75%{
-        background: linear-gradient(270deg,#498FA3, #D6CC99);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-    50%{
+    25%{
         background: linear-gradient(180deg,#498FA3, #D6CC99);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
+    50%{
+        background: linear-gradient(270deg,#498FA3, #D6CC99);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    75%{
+        background: linear-gradient(360deg,#498FA3, #D6CC99);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    
 }
 header article .circulo{
     width: 350px;
@@ -124,12 +132,32 @@ header .iconos ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .4s;
 }
-.iconos ul li :hover {
-    color: var(--primary-color-claro);
+.iconos ul li:hover {
     transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-    border-radius: 20%;
+    transition: 0.3s ease-in-out;
+    
+    box-shadow:0 0 5px #01fd01,0 0 25px #038b25,0 0 50px #0f850b;
+} 
+.iconos ul li :hover{
+    color: #01fd01;
+}
+.iconos ul li:nth-child(2):hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    box-shadow:0 0 5px #298ba3,0 0 25px #0173a0,0 0 50px #0282cc;
+} 
+.iconos ul li:nth-child(3) :hover{
+    color: #020b30;
+}
+.iconos ul li:nth-child(3):hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    box-shadow:0 0 5px #001135,0 0 25px #031742,0 0 50px #010724;
+} 
+.iconos ul li:nth-child(2) :hover{
+    color: #00ccff;
 }
 
 header .iconos ul i{
@@ -164,10 +192,11 @@ main {
     background: linear-gradient(10deg, rgba(68,93,72,1) 47%, rgba(105,144,111,1) 75%, rgba(143,195,151,1) 92%);
 }
 main section.skill h2{
-    color:var(--secondary-color-claro);
+    color:var(--primary-color-claro);
+    text-shadow: 4px 5px 0 #324435, 5px 6px 0 var(--primary-color-claro);
     font-size: 96px;
     -webkit-text-stroke: 1px #001524;
-    padding: 5px 50px 0 50px;
+    padding: 5px 40px 0 40px;
 }
 main .tarjeta{
     width: 651px;
@@ -188,6 +217,11 @@ main .tarjeta i{
     font-size: 100px;
     padding: 22px;
     color: var(--primary-color-claro);
+    transition: .3.5s ease-in-out;
+}
+main .tarjeta i:hover{
+    scale: 1.28;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
 }
 main section.portafolio {
     height: 765px;
@@ -228,7 +262,7 @@ section.portafolio h2 {
     color: #fff;
     padding: 8px 16px;
     border-radius: 15px;
-    font-size: 14px;
+    font-size: 22px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -267,8 +301,26 @@ section.experiencias .mensaje {
 
 footer {
     background: var(--primary-color-oscuro);
+    position: fixed;
     width: 100%;
     height: 280px;
+    position: relative;
+}
+footer .icono  {
+    position: absolute;
+    bottom: 15%;
+    right: 90%;
+}
+footer .icono h3{
+    position: absolute;
+    left:-371%;
+    bottom: 50%;
+    color: #000;
+}
+footer .descarga {
+    /* filter: blur(2px); */
+    margin-top: 20px;
+    margin-right: 80px;
 }
 
 
@@ -287,6 +339,7 @@ footer {
     main .tarjeta-2{
         margin-left: 0;
         margin: 56px 70px;
+    }
     header{
         background: var(--primary-color-oscuro);
         width: 100%;
