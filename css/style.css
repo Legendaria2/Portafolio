@@ -207,7 +207,8 @@ main .tarjeta{
     border-radius: 35px;
     margin: 56px 70px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 
 }
 main .tarjeta-2{
