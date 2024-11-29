@@ -5,6 +5,9 @@
     --primary-color-claro:#D6cc99;
     --secondary-color-claro:#fde5d4;
 }
+.dia #btn-modo {
+    
+}
 
 *{
     margin: 0;
@@ -15,116 +18,58 @@
     font-style: normal;
     
 }
-body{
-    width: 100%;
-    height: 100vh;
-    flex-wrap: wrap;
-}
 
-h1,h2,h3,h4,h5,h6{
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: italic;
-}
-
-header{
-    background: var(--primary-color-oscuro);
+.dia header{
+    background: var(--primary-color-claro);
     width: 100%;
     max-height: 610px;
     text-align: center;
     
 }
 
-header article{
-    padding:40px;
-}
-header article .navegador{
+.dia header article .navegador{
     position: fixed;
-    background: rgba(3, 42, 70, 1);
-    box-shadow: inset 0 0 6px #fff,0 0 6px #fff;
+    background: rgba(210, 200, 150, 1);
+    box-shadow: inset 0 0 6px #000,0 0 6px #031742;
     border-radius: 10px;
     width: auto;
     max-height: 8vh;
     z-index: 99;
 }
-header article .navegador li a{
-    color: #fff;
+.dia header article .navegador li a{
+    color: #000;
     margin: 10px 16px;
     font-family: "Teko", sans-serif;
     font-size: 32px;
     padding: 10px 60px;
 }
-header article .navegador li a:hover{
-    color: var(--primary-color-claro);
+.dia header article .navegador li a:hover{
+    color: var(--secondary-color-claro);
 }
 
-header article h3{
-    margin-bottom: 40px;
-    color: #D6CC99;
-    font-size: 35px;
-}
-
-header article h4{
-    font-size: 45px;
-}
-
-header article p{
-    font-size: 25px;
-}
-
-header article h2, h3, h4, p{
-    color: #fff;
+.dia header article h2,h3{
+    color: var(--primary-color-oscuro);
     text-align: left;
     margin-left: 30px;
 }
 
-header article p{
-    background: linear-gradient(90deg, #D6CC99, #498FA3);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation: fondo 5s infinite ;
-    transition: .4s ease-in-out;
-}
-@keyframes fondo {
-    0%,100%{
-        background: linear-gradient(90deg, #D6CC99, #498FA3);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-    25%{
-        background: linear-gradient(180deg,#498FA3, #D6CC99);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-    50%{
-        background: linear-gradient(270deg,#498FA3, #D6CC99);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-    75%{
-        background: linear-gradient(360deg,#498FA3, #D6CC99);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-    
-}
-header article .circulo{
+.dia header article .circulo{
     width: 350px;
     height: 350px;
     border-radius: 100%;
-    background: #445d4856;
+    background: #7a650480;
     z-index: 2;
     margin-left: 270px;
 }
 
-header article .circulo img{
+.dia header article .circulo img{
     z-index: 50;
 }
-header .iconos ul{
+.dia header .iconos ul{
     list-style: none;
 }
-header .iconos ul li {
-    background: #3b523f9c;
+.dia header .iconos ul li {
+    background: #7a650480;
     border-radius: 50%;
     width: 108px;
     height: 108px;
@@ -133,73 +78,36 @@ header .iconos ul li {
     align-items: center;
     transition: .4s;
 }
-.iconos ul li:hover {
+
+.dia .iconos ul li:nth-child(1):hover {
     transform: scale(1.1);
     transition: 0.3s ease-in-out;
     
     box-shadow:0 0 5px #01fd01,0 0 25px #038b25,0 0 50px #0f850b;
 } 
-.iconos ul li :hover{
+.dia .iconos ul li:nth-child(1) :hover{
     color: #01fd01;
     filter: drop-shadow(0 0 25px #01fd01);
 }
-.iconos ul li:nth-child(2):hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-    box-shadow:0 0 5px #298ba3,0 0 25px #0173a0,0 0 50px #0282cc;
-} 
-.iconos ul li:nth-child(3) :hover{
-    color: #020b30;
-    filter: drop-shadow(0 0 25px #020b30);
+
+.dia header .iconos ul i{
+    font-size: 74px;
+    color: #010724;
 }
-.iconos ul li:nth-child(3):hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-    box-shadow:0 0 5px #001135,0 0 25px #031742,0 0 50px #010724;
-} 
-.iconos ul li:nth-child(2) :hover{
-    color: #00ccff;
-    filter: drop-shadow(0 0 25px #00ccff);
+.dia main section.skill {
+    border:2px solid #000;
+    background: linear-gradient(133deg, rgba(34,195,142,1) 0%, rgba(135,225,93,0.8827906162464986) 51%, rgba(206,253,45,0.9248074229691877) 100%);
 }
 
-header .iconos ul i{
-    font-size: 74px;
-    color: #fff;
-}
-header .iconos ul li:nth-child(1) {
-    position: relative;
-    left: 160px;
-    right: 0;
-    bottom:330px;
-    z-index: 100;
-}
-header .iconos ul li:nth-child(2) {
-    position: relative;
-    right: 0;
-    left: 460px;
-    top:-510px;
-    z-index: 100;
-}
-header .iconos ul li:nth-child(3) {
-    position: relative;
-    right: 0;
-    left: 440px;
-    bottom:380px;
-    z-index: 100;
-}
-main section.skill{
-    width: 100%;
-    height: auto;
-    background: linear-gradient(10deg, rgba(68,93,72,1) 47%, rgba(105,144,111,1) 75%, rgba(143,195,151,1) 92%);
-}
-main section.skill h2{
+.dia main section.skill h2{
     color:var(--primary-color-claro);
     text-shadow: 4px 5px 0 #324435, 5px 6px 0 var(--primary-color-claro);
     font-size: 96px;
     -webkit-text-stroke: 1px #001524;
     padding: 5px 40px 0 40px;
+
 }
-main .tarjeta{
+.dia main .tarjeta{
     width: 651px;
     height: 135px;
     background: linear-gradient(143deg, rgba(255,255,255,0.1) 32%, rgba(153,153,153,0.1) 83%);
@@ -207,26 +115,27 @@ main .tarjeta{
     border-radius: 35px;
     margin: 56px 70px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 
 }
-main .tarjeta-2{
+.dia main .tarjeta-2{
     margin-left: 50%;
 }
-main .tarjeta i{
+.dia main .tarjeta i{
     font-size: 100px;
     padding: 22px;
-    color: var(--primary-color-claro);
-    transition: .3.5s ease-in-out;
+    color: var(--primary-color-oscuro);
+    transition: .3.5s linear;
 }
-main .tarjeta i:hover{
+.dia main .tarjeta i:hover{
     scale: 1.28;
-    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    filter: drop-shadow(0 0 8px rgb(255, 255, 255));
 }
-main section.portafolio {
+.dia main section.portafolio {
     height: 765px;
     width: 100%;
-    background-color: var(--primary-color-oscuro);
+    background-color: var(--primary-color-claro);
     border: 2px solid #ffffff80;
 }
 section.portafolio h2 {
