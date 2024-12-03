@@ -1,24 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400..700&family=Teko:wght@300..700&display=swap');
-:root{
-    --primary-color-oscuro:#001524;
-    --secondary-color-oscuro:#445d48;
-    --primary-color-claro:#D6cc99;
-    --secondary-color-claro:#fde5d4;
-}
-.dia #btn-modo {
-    
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Teko", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    
-}
-
 .dia header{
     background: var(--primary-color-claro);
     width: 100%;
@@ -26,15 +5,19 @@
     text-align: center;
     
 }
-
+.dia .text h3 {
+    color: var(--primary-color-oscuro);
+}
 .dia header article .navegador{
     position: fixed;
     background: rgba(210, 200, 150, 1);
     box-shadow: inset 0 0 6px #000,0 0 6px #031742;
     border-radius: 10px;
     width: auto;
-    max-height: 8vh;
     z-index: 99;
+}
+.dia header article .navegador label {
+    color: #000;
 }
 .dia header article .navegador li a{
     color: #000;
@@ -51,6 +34,36 @@
     color: var(--primary-color-oscuro);
     text-align: left;
     margin-left: 30px;
+}
+.dia article p{
+    background: linear-gradient(90deg, #D6CC99, #498FA3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: fondo1 5s infinite ;
+    transition: .4s ease-in-out;
+}
+@keyframes fondo1 {
+    0%,100%{
+        background: linear-gradient(90deg, #000000, #498fa37a);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    25%{
+        background: linear-gradient(180deg,#498FA3, #000000);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    50%{
+        background: linear-gradient(270deg,#498FA3, #000000);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    75%{
+        background: linear-gradient(360deg,#498FA3, #00000073);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    
 }
 
 .dia header article .circulo{
@@ -96,7 +109,7 @@
 }
 .dia main section.skill {
     border:2px solid #000;
-    background: linear-gradient(133deg, rgba(34,195,142,1) 0%, rgba(135,225,93,0.8827906162464986) 51%, rgba(206,253,45,0.9248074229691877) 100%);
+   background: linear-gradient(45deg, #6a7d68, #445d48);
 }
 
 .dia main section.skill h2{
@@ -138,16 +151,16 @@
     background-color: var(--primary-color-claro);
     border: 2px solid #ffffff80;
 }
-section.portafolio h2 {
+.dia section.portafolio h2 {
     padding: 20px 30%;
-    color: #fff;
+    color: #000000;
     font-size: 96px;
-    text-shadow: 0 0 5px #fff,0 0 25px #fff, 0 0 50px #fff;
-    -webkit-text-stroke: 0.5px #D6CC99;
+    text-shadow: 0 0 5px #445d48,0 0 25px #445d48, 0 0 50px #445d48, 0 0 100px #445d48;
+    -webkit-text-stroke: 0.5px #fff;
 }
 
-.contenido {
-    background-color: #7D9EB8;
+.dia .contenido {
+    background-color: #0366b388;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -159,124 +172,41 @@ section.portafolio h2 {
     margin: 20px auto;
 }
 
-.botones {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.botones a {
+.dia .botones a {
     text-decoration: none;
-    background: #001524;
-    color: #fff;
+    background: #f7f7f7;
+    color: #050505c7;
     padding: 8px 16px;
     border-radius: 15px;
     font-size: 22px;
     transition: all 0.3s ease-in-out;
 }
 
-.botones a:hover {
-    background: #D6CC99;
-    color: #001524;
+.dia .botones a:hover {
+    color: #D6CC99;
+    background: #001524;
 }
 
-.cartas {
+.dia .cartas {
     margin: 40px;
-    background: #fff;
+    background: #302e2e;
     width: 310px;
     height: 420px;
 }
-section.experiencias{
-    background: var(--secondary-color-oscuro);
+.dia section.experiencias{
+    background: linear-gradient(45deg, #6a7d68, #445d48);
     width: 100%;
     height: 1425px;
-    border: 1px solid #000;
+    border: 1px solid #fcb36f38;
 }
-section.experiencias h2 {
-    color: #fff;
+.dia section.experiencias h2 {
+    color: #010724;
     font-size: 50px;
     margin: 50px 25px;
     
 }
-section.experiencias .mensaje {
-    width: 1050px;
-    height: 485px;
-    background: #999;
-    border: 5px solid #000;
-    border-radius: 50px;
-    margin: 20px 50px;
-}
 
-footer {
-    background: var(--primary-color-oscuro);
-    width: 40%;
-    height: 125px;
-    border-radius: 50px;
-    margin-bottom: 8px;
-    margin-left: 30%;
-    position: absolute;
-    bottom: -110px;
-    left: 0;  
-    color: #fff; 
-    text-align: center; 
-}
-footer:hover { bottom: 0; }
-footer.ocultar {
-    position: absolute;
-}
-footer .icono  {
-    height: 50px;
-}
-footer .icono h3{
-    color: #fff;
-    font-size: 40px;
-    margin: 20%;
-}
-/* footer .descarga img {
-    filter: blur(1px);
-    margin:20px 0;
-    margin-right: 80px;
-    width: 100px;
-    animation: rotacion 4s infinite;
-}
-@keyframes rotate {
-    0%,100%{
-        rotate: 90deg;
-    }
-    15%{
-        rotate: 120deg;
-    }
-    30%,45%{
-        rotate: 180deg;
-    }
-    60%,75%{
-        rotate: 360deg;
-    }
-} */
-
-
-@media (max-width: 991px) and (min-width: 300px) {
-    header article .navegador{
-        position: static;
-        background: rgba(3, 42, 70, 1);
-        box-shadow: none;
-        border-radius: 10px;
-        padding: 0;
-        margin: 0;
-        z-index: 99;
-    }
-
-    main .tarjeta-2{
-        margin-left: 0;
-        margin: 56px 70px;
-    }
-    header{
-        background: var(--primary-color-oscuro);
-        width: 100%;
-        min-height: 610px;
-        position: static;   
-    }
-    header .text {
-        position: static;
-    }
+.dia footer {
+    background: var(--primary-color-claro);
+ 
 }
