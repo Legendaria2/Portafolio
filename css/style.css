@@ -32,7 +32,6 @@ header{
     width: 100%;
     max-height: 610px;
     text-align: center;
-    
 }
 
 header article{
@@ -43,8 +42,8 @@ header article .navegador{
     background: rgba(3, 42, 70, 1);
     box-shadow: inset 0 0 6px #fff,0 0 6px #fff;
     border-radius: 10px;
-    width: auto;
-    max-height: 8vh;
+    width: auto; 
+    /* max-height: 8vh;  */
     z-index: 99;
 }
 header article .navegador li a{
@@ -56,6 +55,15 @@ header article .navegador li a{
 }
 header article .navegador li a:hover{
     color: var(--primary-color-claro);
+}
+header article .navegador label{
+    color: var(--primary-color-claro);
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
 }
 
 header article h3{
@@ -161,6 +169,9 @@ header .iconos ul li {
     color: #00ccff;
     filter: drop-shadow(0 0 25px #00ccff);
 }
+header.text {
+    position: absolute;
+}
 
 header .iconos ul i{
     font-size: 74px;
@@ -190,7 +201,7 @@ header .iconos ul li:nth-child(3) {
 main section.skill{
     width: 100%;
     height: auto;
-    background: linear-gradient(10deg, rgba(68,93,72,1) 47%, rgba(105,144,111,1) 75%, rgba(143,195,151,1) 92%);
+    background: linear-gradient(45deg, #2f4032, #445d48);
 }
 main section.skill h2{
     color:var(--primary-color-claro);
@@ -290,14 +301,6 @@ section.experiencias h2 {
     margin: 50px 25px;
     
 }
-section.experiencias .mensaje {
-    width: 1050px;
-    height: 485px;
-    background: #999;
-    border: 5px solid #000;
-    border-radius: 50px;
-    margin: 20px 50px;
-}
 
 footer {
     background: var(--primary-color-oscuro);
@@ -312,42 +315,11 @@ footer {
     color: #fff; 
     text-align: center; 
 }
-footer:hover { bottom: 0; }
-footer.ocultar {
-    position: absolute;
-}
-footer .icono  {
-    height: 50px;
-}
-footer .icono h3{
+footer h3 {
     color: #fff;
-    font-size: 40px;
-    margin: 20%;
 }
-/* footer .descarga img {
-    filter: blur(1px);
-    margin:20px 0;
-    margin-right: 80px;
-    width: 100px;
-    animation: rotacion 4s infinite;
-}
-@keyframes rotate {
-    0%,100%{
-        rotate: 90deg;
-    }
-    15%{
-        rotate: 120deg;
-    }
-    30%,45%{
-        rotate: 180deg;
-    }
-    60%,75%{
-        rotate: 360deg;
-    }
-} */
 
-
-@media (max-width: 991px) and (min-width: 300px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     header article .navegador{
         position: static;
         background: rgba(3, 42, 70, 1);
@@ -365,10 +337,37 @@ footer .icono h3{
     header{
         background: var(--primary-color-oscuro);
         width: 100%;
-        min-height: 610px;
-        position: static;   
+        max-height: 610px;
+
     }
     header .text {
+        position: initial;
+    }
+}
+
+
+
+@media (min-width: 430px) and (max-width:932px) {
+    header article .navegador{
         position: static;
+        background: rgba(3, 42, 70, 1);
+        box-shadow: none;
+        border-radius: 10px;
+        padding: 0;
+        margin: 0;
+        z-index: 99;
+    }
+
+    main .tarjeta-2{
+        margin-left: 0;
+        margin: 56px 70px;
+    }
+    header{
+        background: var(--primary-color-oscuro);
+        width: 100%;
+        min-height: 610px;  
+    }
+    header article .circulo {
+        position: initial;
     }
 }
