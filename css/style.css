@@ -56,10 +56,14 @@ header article .navegador li a{
 header article .navegador li a:hover{
     color: var(--primary-color-claro);
 }
-header article .navegador label{
+header article label{
     color: var(--primary-color-claro);
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
+    font-size: 50px;
+    background: #001135;
+    border-radius: 50%; ;
+    border: #000;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -204,7 +208,7 @@ main section.skill{
     background: linear-gradient(45deg, #2f4032, #445d48);
 }
 main section.skill h2{
-    color:var(--primary-color-claro);
+    color:var(--secondary-color-claro);
     text-shadow: 4px 5px 0 #324435, 5px 6px 0 var(--primary-color-claro);
     font-size: 96px;
     -webkit-text-stroke: 1px #001524;
@@ -304,19 +308,22 @@ section.experiencias h2 {
 
 footer {
     background: var(--primary-color-oscuro);
-    width: 40%;
-    height: 125px;
+    width: 12%;
+    height: 12%;
     border-radius: 50px;
     margin-bottom: 8px;
-    margin-left: 30%;
-    position: absolute;
-    bottom: -110px;
-    left: 0;  
+    margin-left: 87%;
     color: #fff; 
-    text-align: center; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:2px 2px 0 #00ccffa8,-2px -2px 0 #00ccffa8;
 }
 footer h3 {
     color: #fff;
+    padding: 0 auto;
+    font-size: 25px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
