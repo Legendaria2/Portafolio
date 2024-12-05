@@ -43,7 +43,6 @@ header article .navegador{
     box-shadow: inset 0 0 6px #fff,0 0 6px #fff;
     border-radius: 10px;
     width: auto; 
-    /* max-height: 8vh;  */
     z-index: 99;
 }
 header article .navegador li a{
@@ -116,6 +115,10 @@ header article p{
     }
     
 }
+header section .detalles {
+    position: absolute;
+}
+
 header article .circulo{
     width: 350px;
     height: 350px;
@@ -123,6 +126,8 @@ header article .circulo{
     background: #445d4856;
     z-index: 2;
     margin-left: 270px;
+    position: relative;
+    right: -140%;
 }
 
 header article .circulo img{
@@ -169,9 +174,6 @@ header .iconos ul li {
     color: #00ccff;
     filter: drop-shadow(0 0 25px #00ccff);
 }
-header.text {
-    position: absolute;
-}
 
 header .iconos ul i{
     font-size: 74px;
@@ -179,7 +181,7 @@ header .iconos ul i{
 }
 header .iconos ul li:nth-child(1) {
     position: relative;
-    left: 160px;
+    left: 189%;
     right: 0;
     bottom:330px;
     z-index: 100;
@@ -187,14 +189,14 @@ header .iconos ul li:nth-child(1) {
 header .iconos ul li:nth-child(2) {
     position: relative;
     right: 0;
-    left: 460px;
+    left: 232%;
     top:-510px;
     z-index: 100;
 }
 header .iconos ul li:nth-child(3) {
     position: relative;
     right: 0;
-    left: 440px;
+    left: 235%;
     bottom:380px;
     z-index: 100;
 }
@@ -340,8 +342,10 @@ footer h3 {
         max-height: 610px;
 
     }
-    header .text {
-        position: initial;
+    header section .detalles {
+        position: relative;
+        left: 0;
+        right: 0;
     }
 }
 
@@ -369,5 +373,9 @@ footer h3 {
     }
     header article .circulo {
         position: initial;
+        
+    }
+    header section .text {
+        position: relative;
     }
 }
