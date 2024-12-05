@@ -113,7 +113,7 @@
 }
 
 .dia main section.skill h2{
-    color:var(--primary-color-claro);
+    color: #fff;
     text-shadow: 4px 5px 0 #324435, 5px 6px 0 var(--primary-color-claro);
     font-size: 96px;
     -webkit-text-stroke: 1px #001524;
@@ -208,5 +208,6 @@
 
 .dia footer {
     background: var(--primary-color-claro);
+    box-shadow:2px 2px 0 #202222a8,-2px -2px 0 #202222a8;
  
 }
