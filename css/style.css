@@ -62,7 +62,7 @@ header article label{
     font-size: 50px;
     background: #001135;
     border-radius: 50%; ;
-    border: #000;
+    border: 1px solid #000;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -298,14 +298,23 @@ section.portafolio h2 {
 section.experiencias{
     background: var(--secondary-color-oscuro);
     width: 100%;
-    height: 1425px;
+    height: 80vh;
     border: 1px solid #000;
 }
 section.experiencias h2 {
     color: #fff;
     font-size: 50px;
     margin: 50px 25px;
-    
+}
+section.experiencias li {
+    font-size: 30px;
+    margin: 10px 20px;
+    color: #b9b9b9;
+    list-style: none;
+}
+section.experiencias li::before{
+    content: "🌑";
+    color: #010724;
 }
 
 footer {

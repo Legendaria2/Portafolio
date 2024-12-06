@@ -66,6 +66,20 @@
     
 }
 
+.dia header article label{
+    color: #fff !important;
+    height: 60px;
+    width: 60px;
+    font-size: 50px;
+    background: #001135;
+    border-radius: 50%; ;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+
 .dia header article .circulo{
     width: 350px;
     height: 350px;
@@ -203,8 +217,18 @@
     color: #010724;
     font-size: 50px;
     margin: 50px 25px;
-    
 }
+.dia section.experiencias li {
+    font-size: 30px;
+    margin: 10px 20px;
+    color: #ffffff;
+    list-style: none;
+}
+.dia section.experiencias li::before{
+    content: "🌕";
+    color: #010724;
+}
+
 
 .dia footer {
     background: var(--primary-color-claro);
